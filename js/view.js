@@ -12,6 +12,11 @@ import AddTodo from './components/add-todo.js';
     setModel(model) {
       this.model = model;
     }
+
+    render() {
+      const todos = this.model.getTodos();
+      todos.forEach((todo) => this.createRow(todo));
+    }
   
     addTodo(title, description) {
       const todo = this.model.addTodo(title, description);
