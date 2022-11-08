@@ -46,7 +46,7 @@ import Modal from './components/modal.js';
   
     createRow(todo) {
       const row = table.insertRow();
-      row.setAttribute('id', id++);
+      row.setAttribute('id', todo.id);
       row.innerHTML = `
       <td>${todo.title}</td>
       <td>${todo.description}</td>
