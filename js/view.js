@@ -24,7 +24,7 @@ import Filters from './components/filters.js';
       const todos = this.model.getTodos();
       todos.forEach((todo) => this.createRow(todo));
     }
-    filters(filters){
+    filter(filters){
       const{type , words} = filters;
       const [, ...rows] = this.table.getElementsByTagName('tr');
       for(const row of rows){
